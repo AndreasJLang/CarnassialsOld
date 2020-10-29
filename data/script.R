@@ -174,7 +174,7 @@ proviverra.predict <- predict(dne.lda.principals, newdata = proviverra.dne)
 proviverra.predict[["posterior"]]
 
 
-# LDA of ariaDNE values
+## LDA of ariaDNE values
 
 ### confusion matrix and bootstrap scripts after Maindonald (2008) retrieved from https://maths-people.anu.edu.au/~johnm/courses/dm/math3346/2008/pdf/
 confusion <- function(actual, predicted, names = NULL, printit = TRUE, prior = NULL) {
