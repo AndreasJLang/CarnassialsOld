@@ -72,7 +72,7 @@ games.howell <- function(grp, obs) {
 }
 
 #ariaDNE test for normality of values for principal carnassials in 5 groups
-normality.test <- read.csv("ariaDNE_anova_groups.csv", header = TRUE) # density principals ohne proviverra: anova_ohne_proviverra (ariaDNE ~ Group), density alle ohne proviverra: lda.csv (ariaDNE ~ Group)
+normality.test <- read.csv("ariaDNE_anova_groups.csv", header = TRUE)
 
 shapiro.test(normality.test$X01_carnivora_basal)
 shapiro.test(normality.test$X02_carnivora_derived)
@@ -80,7 +80,7 @@ shapiro.test(normality.test$X03_dasy_basal)
 shapiro.test(normality.test$X04_dasy_derived)
 shapiro.test(normality.test$X06_hy_derived)
 
-normality.test.2 <- read.csv("ariaDNE_anova.csv", header = TRUE) # density principals ohne proviverra: anova_ohne_proviverra (ariaDNE ~ Group), density alle ohne proviverra: lda.csv (ariaDNE ~ Group)
+normality.test.2 <- read.csv("ariaDNE_anova.csv", header = TRUE)
 leveneTest(normality.test.2$ariaDNE, normality.test.2$function_all, center=mean)
 
 aov.results <- aov(normality.test.2$ariaDNE ~ normality.test.2$function_all)
@@ -95,7 +95,7 @@ gh.output
 
 
 #DNE test for normality of values for principal carnassials in 5 groups
-normality.test <- read.csv("DNE_anova_groups.csv", header = TRUE) # density principals ohne proviverra: anova_ohne_proviverra (ariaDNE ~ Group), density alle ohne proviverra: lda.csv (ariaDNE ~ Group)
+normality.test <- read.csv("DNE_anova_groups.csv", header = TRUE)
 
 shapiro.test(normality.test$X01_carnivora_basal)
 shapiro.test(normality.test$X02_carnivora_derived)
@@ -103,7 +103,7 @@ shapiro.test(normality.test$X03_dasy_basal)
 shapiro.test(normality.test$X04_dasy_derived)
 shapiro.test(normality.test$X05_hy_derived)
 
-normality.test.2 <- read.csv("DNE_anova.csv", header = TRUE) # density principals ohne proviverra: anova_ohne_proviverra (ariaDNE ~ Group), density alle ohne proviverra: lda.csv (ariaDNE ~ Group)
+normality.test.2 <- read.csv("DNE_anova.csv", header = TRUE)
 leveneTest(normality.test.2$DNE, normality.test.2$function_all, center=mean)
 
 aov.results <- aov(normality.test.2$DNE ~ normality.test.2$function_all)
